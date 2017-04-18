@@ -2,6 +2,7 @@
 #define MAPCREATOR_H
 
 #include <SFML/Graphics.hpp>
+#include "TextureManager.h"
 
 class MapCreator {
 	static sf::RenderWindow window;
