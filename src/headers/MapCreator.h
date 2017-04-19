@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "TextureManager.h"
+#include "Segments/TexturesPanelSegment.h"
 
 class MapCreator {
 	static sf::RenderWindow window;

@@ -15,6 +15,7 @@ public:
 	static sf::Texture * setTexture(const std::string &name);
 	static void splitTexture(const sf::IntRect &area, const sf::Vector2u &segment);
 	static sf::Vector2u getTextureSize();
+	static unsigned int getContainerSize();
 	static sf::Texture * getTexture(const unsigned int &index);
 	static void clearContainer();
 

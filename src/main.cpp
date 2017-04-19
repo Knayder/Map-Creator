@@ -7,5 +7,6 @@ int main(int argc, char **argv) {
 		MapCreator::start(argv[1]);
 	else
 		MapCreator::start("texture.png");
+
 	return 0;
 }

@@ -6,6 +6,7 @@ TextureManager::~TextureManager(){
 		delete txtr;
 }
 
+
 sf::Texture * TextureManager::setTexture(const std::string &name){
 	TextureManager &instance = TextureManager::getInstance();
 
@@ -36,6 +37,11 @@ sf::Vector2u TextureManager::getTextureSize(){
 	return TextureManager::getInstance().texture->getSize();
 }
 
+unsigned int TextureManager::getContainerSize()
+{
+	return TextureManager::getInstance().texturesContainer.size();
+}
+
 sf::Texture * TextureManager::getTexture(const unsigned int & index){
 	TextureManager &instance = TextureManager::getInstance();
 	if (index < instance.texturesContainer.size()) 
@@ -52,8 +58,6 @@ void TextureManager::clearContainer()
 		delete texture;
 	container.clear();
 }
-
-
 
 
 TextureManager & TextureManager::getInstance(){

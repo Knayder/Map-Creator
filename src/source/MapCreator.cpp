@@ -5,9 +5,12 @@ sf::ContextSettings MapCreator::settings;
 
 void MapCreator::run()
 {
+	TexturesPanelSegment segment({ 0,0 });
 	while (window.isOpen()) {
 		input();
+		segment.update(0);
 		window.clear(sf::Color::Red);
+		window.draw(segment);
 		window.display();
 	}
 }
