@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "TextureManager.h"
 #include "Segments/TexturesPanelSegment.h"
+#include "Button.h"
 
 class MapCreator {
 	static sf::RenderWindow window;
@@ -11,6 +12,8 @@ class MapCreator {
 
 	static void run();
 	static void input();
+
+	static int currentlyPlacingTexture;
 public:
 	MapCreator() = delete;
 	MapCreator(const MapCreator &) = delete;
