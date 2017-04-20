@@ -10,18 +10,23 @@ void MapCreator::run()
 	Button *buttons[16];
 	for (int i = 0; i < 16; i++)
 		buttons[i] = new Button({ 8.f + i*(4 * 16 + 16), 636 }, { 16.f * 4, 16 * 4 });
+	Surface surface({ 0,0 });
 
 	while (window.isOpen()) {
 		input();
-		segment.update(0);
-		window.clear(sf::Color::Red);
-		window.draw(segment);
+
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 			sf::Vector2i mouse = sf::Mouse::getPosition(window);
 			for (int i = 0; i < 16; i++)
 				if (buttons[i]->isClicked(mouse))
 					currentlyPlacingTexture = i + segment.getStartValue();
 		}
+
+		segment.update(0);
+		window.clear(sf::Color::Red);
+		window.draw(segment);
+		window.draw(surface);
+		
 		window.display();
 	}
 	for (int i = 0; i < 16; i++)

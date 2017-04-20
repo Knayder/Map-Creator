@@ -5,6 +5,7 @@
 #include "TextureManager.h"
 #include "Segments/TexturesPanelSegment.h"
 #include "Button.h"
+#include "Segments\Surface.h"
 
 class MapCreator {
 	static sf::RenderWindow window;
